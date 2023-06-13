@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Kurdistan</string>
+    <string name="searchbar_hint">جستوجو در سوپر مارکت کردستان</string>
+    <string name="products">Products</string>
+    <string name="price">price</string>
+    <string name="date">Date</string>
+    <string name="date_age">Date_age</string>
+    <string name="twice_back">برای خروج دوباره بازگشت را بزنید</string>
+</resources>
