@@ -7,6 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
+import android.widget.Toast;
+
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -62,16 +65,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         this.checkBackAgan = true;
-        Snackbar snackbar = Snackbar.make(MainActivity.this.getCurrentFocus(), R.string.twice_back, Snackbar.LENGTH_SHORT);
-        snackbar.getView().setTranslationY(-135);
-        snackbar.show();
-
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                checkBackAgan = false;
-            }
-        }, 2000);
-
+        Toast.makeText(this, R.string.twice_back, Toast.LENGTH_SHORT).show();
+        new Handler().postDelayed(() -> checkBackAgan = false, 2000);
     }
 }
