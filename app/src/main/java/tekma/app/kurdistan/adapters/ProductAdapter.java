@@ -15,14 +15,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import tekma.app.kurdistan.R;
-import tekma.app.kurdistan.models.Products;
+import tekma.app.kurdistan.models.Product;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHolder> {
 
     private Activity activity;
-    private List<Products> dataList;
+    private List<Product> dataList;
 
-    public ProductAdapter(Activity activity, List<Products> dataList) {
+    public ProductAdapter(Activity activity, List<Product> dataList) {
         this.activity = activity;
         this.dataList = dataList;
     }
@@ -39,7 +39,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     @SuppressLint({"UseCompatLoadingForDrawables", "SetTextI18n"})
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Products products = dataList.get(position);
+        Product products = dataList.get(position);
 
         ImageView image = holder.image;
         TextView name = holder.name;
